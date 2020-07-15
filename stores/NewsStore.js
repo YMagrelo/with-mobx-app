@@ -13,7 +13,8 @@ class NewsStore {
 
   async fetch(country) {
     const response = await makeFetchRequest(country);
-    this.setNews(response);
+  
+    this.setNews(response.articles);
   }
 
   @action setNews(news) {

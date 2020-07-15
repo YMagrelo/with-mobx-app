@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
+import styles from './news.module.scss';
+
+const country = 'us';
 
 @inject('newsStore') @observer
-
 class newsUS extends Component {
-  country = 'us';
   static async getInitialProps({ mobxStore }) {
-    await mobxStore.newsStore.fetch(this.country);
+    await mobxStore.newsStore.fetch(country);
     return { news: mobxStore.newsStore.news };
   }
 
@@ -18,7 +19,20 @@ class newsUS extends Component {
 
     return (
       <Layout>
-        <h1>News about sport:</h1>
+        <h1 className={styles.heading}>Live breaking news</h1>
+        <ul className={styles.list}>
+        {news.map(news => (
+            <li className={styles.item}>
+              <h3><a href={news.url}>{news.title}</a></h3>
+              <p className={styles.item__content}>
+                <strong>Author: </strong>
+                {news.author}
+              </p>
+              <img src={news.urlToImage} alt="news title img" className={styles.item__img} />
+              <p className={styles.item__content}>{news.publishedAt}</p>
+            </li>
+          ))}
+        </ul>
         <h2>
           <Link href="/">
             <a>Back to home</a>

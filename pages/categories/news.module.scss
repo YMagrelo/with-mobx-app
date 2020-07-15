@@ -1,0 +1,28 @@
+.heading {
+  text-transform: uppercase;
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.list {
+  text-align: left;
+}
+
+.item {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid #F8F8F8;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  &__content {
+    font-size: 14px;
+  }
+
+  &__img {
+    margin-top: 5px;
+  }
+}

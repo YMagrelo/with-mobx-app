@@ -8,20 +8,32 @@ body {
   font-size: 18px;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 * {
   box-sizing: border-box;
 }
 
 a {
-  color: #0070f3;
+  color: #000;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #0070f3;
+}
+
+ul {
+  list-style: none;
 }
 
 img {
-  max-width: 100%;
-  display: block;
+  width: 400px;
 }
