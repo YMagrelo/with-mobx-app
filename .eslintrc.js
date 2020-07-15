@@ -18,10 +18,6 @@ module.exports = {
   },
   "rules": {
     "semi": "error",
-    "indent": ["error", 2,],
-    "react/react-in-jsx-scope": "off"
+    "indent": ["error", 2,]
   },
 };
-
-
-// "no-cond-assign": ["error", "always",],

@@ -29,9 +29,14 @@ NewsItem.propTypes = {
   news: PropTypes.shape({
     url: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    urlToImage: PropTypes.string.isRequired,
+    author: PropTypes.string,
+    urlToImage: PropTypes.string,
     publishedAt: PropTypes.string.isRequired,
   }).isRequired,
+};
+
+NewsItem.defaultProps = {
+  author: PropTypes.string,
+  urlToImage: PropTypes.string,
 };
 
