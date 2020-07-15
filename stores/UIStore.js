@@ -1,3 +1,5 @@
+import { observable, action } from 'mobx';
+
 class UIStore {
     @observable searchOverlayOpen = false;
   

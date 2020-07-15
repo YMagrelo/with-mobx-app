@@ -15,10 +15,10 @@ export default function newsUA() {
   );
 }
 
-export async function getServerSedeProps(context) {
-  return {
-    props: {
+// export async function getServerSedeProps(context) {
+//   return {
+//     props: {
 
-    }
-  }
-}
+//     }
+//   }
+// }

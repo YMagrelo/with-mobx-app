@@ -3,22 +3,22 @@ import { observable, action } from 'mobx';
 import { makeFetchRequest } from '../utils/API';
 
 class NewsStore {
-  @observable post = null;
+  @observable news = [];
 
-  endpoint = 'post';
+  
 
   constructor(initialData = {}) {
-    this.post = initialData.post;
+    this.news = initialData.news;
   }
 
-  async fetch(id) {
-    const response = await makeFetchRequest(`${this.endpoint}/${id}/`);
-    this.setPost(response);
+  async fetch(country) {
+    const response = await makeFetchRequest(country);
+    this.setNews(response);
   }
 
-  @action setPost(post) {
-    this.post = post;
+  @action setNews(news) {
+    this.news = news;
   }
 }
 
-export default PostStore;
+export default NewsStore;

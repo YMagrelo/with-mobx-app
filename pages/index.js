@@ -10,17 +10,22 @@ export default function Index() {
         <title>Breaking news</title>
       </Head>
       <h1>Breaking news</h1>
-      <h2>
-        <Link href="/categories/newsUA">
-          <a> Ukrainian news</a>
-        </Link>
-      </h2>
-      
-      <h2>
-        <Link href="/categories/newsUSA">
-          <a> USA news</a>
-        </Link>
-      </h2>
+      <ul>
+        <li>
+          <h2>
+            <Link href="/categories/newsUA">
+              <a> Ukrainian news</a>
+            </Link>
+          </h2>
+        </li>
+        <li>
+          <h2>
+            <Link href="/categories/newsUS">
+              <a> USA news</a>
+            </Link>
+          </h2>
+        </li>
+      </ul>
     </Layout>
   );
 }
