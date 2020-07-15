@@ -26,7 +26,7 @@ class newsUA extends Component {
         <h1 className={styles.heading}>Live breaking news</h1>
         <ul className={styles.list}>
         {news.map(news => (
-            <NewsItem news={news} />
+            <NewsItem news={news} key={news.title} />
           ))}
         </ul>
         <h2>
