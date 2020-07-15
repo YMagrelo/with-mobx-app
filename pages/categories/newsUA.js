@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-import styles from './news.module.scss';
+import Head from 'next/head';
+import styles from '../../components/news.module.scss';
+import NewsItem from '../../components/NewsItem';
 
 const country = 'ua';
 
@@ -15,22 +17,16 @@ class newsUA extends Component {
 
   render() {
     const { news } = this.props;
-    console.log(news);
 
     return (
       <Layout>
+        <Head>
+          <title>Ukraine</title>
+        </Head>
         <h1 className={styles.heading}>Live breaking news</h1>
         <ul className={styles.list}>
         {news.map(news => (
-            <li className={styles.item}>
-              <h3><a href={news.url}>{news.title}</a></h3>
-              <p className={styles.item__content}>
-                <strong>Author: </strong>
-                {news.author}
-              </p>
-              <img src={news.urlToImage} alt="news title img" className={styles.item__img} />
-              <p className={styles.item__content}>{news.publishedAt}</p>
-            </li>
+            <NewsItem news={news} />
           ))}
         </ul>
         <h2>

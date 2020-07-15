@@ -13,12 +13,12 @@ export default function Index() {
       <h1 className={styles.heading}>Breaking news</h1>
       <h2>
         <Link href="/categories/newsUA">
-          <a> Ukrainian news</a>
+          <a>UKRAINE</a>
         </Link>
       </h2>
       <h2>
         <Link href="/categories/newsUS">
-          <a> USA news</a>
+          <a>USA</a>
         </Link>
       </h2>
     </Layout>
