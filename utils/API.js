@@ -1,4 +1,4 @@
-const BASE_URL = 'https://newsapi.org/v2/top-headlines?';
+const BASE_URL = 'http://newsapi.org/v2/top-headlines?';
 const apiKey = 'b2a0db956acc47c193a5a8359fbf1f90';
 
 export const makeFetchRequest = (country) => {
